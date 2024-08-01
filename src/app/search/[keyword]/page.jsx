@@ -4,7 +4,7 @@ import Movies from "@/components/Movies";
 const Page = async ({params}) => {
     const keyword= params.keyword;
 
-    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=633176bfe6ba148117bba059045ce768&query=${keyword}&language=en-US&include_adult=false`)
+    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=apikey&query=${keyword}&language=en-US&include_adult=false`)
     const data= await res.json()
     return (
         <div className="">
