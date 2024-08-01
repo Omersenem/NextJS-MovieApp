@@ -8,7 +8,7 @@ export const metadata = {
 const Page = async ({searchParams}) => {
 
 
-    const res = await fetch(`https://api.themoviedb.org/3/${searchParams.genre ? "movie/" + searchParams.genre : "trending/all/day"}?api_key=633176bfe6ba148117bba059045ce768&language=en-US&page=1 `,
+    const res = await fetch(`https://api.themoviedb.org/3/${searchParams.genre ? "movie/" + searchParams.genre : "trending/all/day"}?api_key=apikey&language=en-US&page=1 `,
         {next: {revalidate: 10000}})
 
     const data = await res.json();
